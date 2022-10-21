@@ -1,76 +1,45 @@
-<form class       ="m-5 "
-      autocomplete="off"
-      #f="ngForm"  
-      (ngSubmit)  ="onLogin()"
-      >
-      <h1>
-        Bienvenid@
-      </h1>
-      
-      <span>
-      Para iniciar sesion ingrese usuario/mail y contraseña
-      </span>
-      <div   class="mb-3 mt-2">
-      <label 
-      for  ="nombreUsuario" 
-      class="form-label"
-      >
-      Email
-      </label>
-      <input 
-      
-      type       ="email" 
-      id         ="nombreUsuario" 
-      name       ="nombreUsuario"
-      [(ngModel)]="nombreUsuario"  
-      class      ="form-control bg-secondary text-white" 
-      required
-      
-      >
-<!--       [ngClass]  ="{'is-valid':!campoValido('userId'),'is-invalid':campoValido('userId')}"
- -->     <!--  <span 
-      class="form-text text-danger"
-      *ngIf="campoValido('userId')"
-      >
-          El mail es obligatorio
-      </span> -->
-    </div>
-    
-     <div class ="mb-3">
-      
-      <label 
-      for  ="password" 
-      class="form-label"
-      >
-      Contraseña
-      </label>
-      
-      <input 
-      
-      type       ="password" 
-      id         ="password" 
-      name       ="password"
-      [(ngModel)]="password"
-      class      ="form-control bg-secondary text-white" 
-      required
-      >
-<!--       [ngClass]  ="{'is-valid':!campoValido('password'),'is-invalid':campoValido('password')}"
- -->
-     <!--  <span 
-      class="form-text text-danger"
-      *ngIf="campoValido('password')"
-      >
-      La contraseña debe tener 6 caracteres o mas
-      </span> -->
-      
-      
-    </div>
-   
-    <button type      ="submit" 
-            class     ="btn btn-secondary float-end"
-          
-            >
-            Enviar
-          </button>
-          
-  </form>
+<form class="m-5 " autocomplete="off" #f="ngForm" (ngSubmit)="onLogin()">
+  <h1>
+    Bienvenid@
+  </h1>
+
+  <span>
+    Para iniciar sesion ingrese usuario/mail y contraseña
+  </span>
+  <div class="mb-3 mt-2">
+    <label for="nombreUsuario" class="form-label">
+      User
+    </label>
+    <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario"
+      class="form-control bg-secondary text-white" required
+      [ngClass]="{'is-valid':!campoValido(),'is-invalid':campoValido()}">
+
+
+    <span class="form-text text-danger" *ngIf="campoValido()">
+
+    </span>
+  </div>
+
+  <div class="mb-3">
+
+    <label for="password" class="form-label">
+      Password
+    </label>
+
+    <input type="password" id="password" name="password" [(ngModel)]="password"
+      class="form-control bg-secondary text-white" required
+      [ngClass]="{'is-valid':!campoValido(),'is-invalid':campoValido()}">
+
+
+    <span class="form-text text-danger" *ngIf="campoValido()">
+      Algunos datos son incorrectos, por favor verifique su usuario y contraseña.
+    </span>
+
+
+  </div>
+
+  <button type="submit" class="btn btn-secondary float-end">
+    Enviar
+  </button>
+
+</form>
