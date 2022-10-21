@@ -8,6 +8,7 @@ import { SkillsComponent } from './pages/skills/skills.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -24,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     NavbarComponent,
     HeaderComponent,
+    FooterComponent,
     
   ],
   imports: [
