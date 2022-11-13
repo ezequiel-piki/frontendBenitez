@@ -8,8 +8,8 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
 
-  //private url ='https://backendbenitez.herokuapp.com/skills'
-  private url = 'http://localhost:8181/skills'
+  private url = 'https://backendbenitez.herokuapp.com/skills'
+  //private url = 'http://localhost:8181/skills'
 
   constructor(private httpClient: HttpClient) { }
 

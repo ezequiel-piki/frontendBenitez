@@ -8,8 +8,8 @@ import { Habilidades } from '../interface/portfolio.interface';
 })
 export class PortfolioService {
 
-  //private url ='https://backendbenitez.herokuapp.com/habilidad'
-  private url = 'http://localhost:8181/habilidad'
+  private url = 'https://backendbenitez.herokuapp.com/habilidad'
+  //private url = 'http://localhost:8181/habilidad'
   constructor(private http: HttpClient) { }
 
 

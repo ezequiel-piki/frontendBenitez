@@ -8,8 +8,8 @@ import { Persona } from '../model/persona';
 })
 export class PersonaService {
 
-  //private url ='https://backendbenitez.herokuapp.com/persona'
-  private url = 'http://localhost:8181/persona'
+  private url = 'https://backendbenitez.herokuapp.com/persona'
+  //private url = 'http://localhost:8181/persona'
 
   constructor(private httpClient: HttpClient) { }
 
