@@ -1,22 +1,53 @@
 <div class="container mb-2">
-  <h1>Proyectos</h1>
+  <div class="d-inline-flex mt-1">
+    <div class="">
+      <h1 class="p-2">Proyectos</h1>
+    </div>
+    <div class="my-auto">
+      <button class="btn btn-outline-dark btn-sm rounded-0 shadow" routerLink="/portfolio/agregarProyecto"
+        *ngIf="isLogged">
+        <i class="bi bi-plus-lg" style="font-size: 21px;"></i>
+      </button>
+
+    </div>
+  </div>
   <hr>
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card ">
-        <img src="../../../../assets/img/marvelVSdc/marvelvsdc.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">APP DC vs Marvel Heroes</h5>
-          <p class="card-text">Aplicación para gestionar catalogo de super heroes de DC y Marvel. Usando Angular,
-            TypeScript y Bootstrap. <a href="https://github.com/ezequiel-piki/Heroes-APP-Marvel-vs-DC"
-              target="_blank">Ver codigo
-              en github</a></p>
-        </div>
 
+    <div class="col" *ngFor="let proyecto of proyectos">
+      <div class="card ">
+        <!--   <img src={{proyecto.img}} class="card-img-top" alt="imagen del proyecto"> -->
+        <div class="card-body">
+          <h5 class="card-title">{{proyecto.nombreP}}</h5>
+          <p class="card-text">{{proyecto.descripcion}}
+
+          </p>
+        </div>
+        <div class="btn-group">
+
+          <button type="button" class="btn btn-outline-secondary rounded-0" *ngIf="isLogged"
+            routerLink="/portfolio/editarProyecto/{{proyecto.id}}">
+
+            <i class="bi bi-pencil"></i>
+            Editar
+          </button>
+
+          <button type="button" class="btn btn-outline-danger rounded-0 " (click)="delete(proyecto.id)"
+            *ngIf="isLogged">
+            <i class="bi bi-x-circle"></i>
+            Eliminar
+          </button>
+
+        </div>
       </div>
     </div>
 
-    <div class="col">
+
+
+  </div>
+</div>
+
+<!--  <div class="col">
       <div class="card ">
         <img src="../../../../assets/img/csharp/CSharp.png" class="card-img-top" alt="...">
         <div class="card-body">
@@ -29,6 +60,7 @@
 
       </div>
     </div>
+
     <div class="col">
       <div class="card ">
         <img src="../../../../assets/img/restApi/restApi.png" class="card-img-top" alt="...">
@@ -43,6 +75,7 @@
 
       </div>
     </div>
+
     <div class="col">
       <div class="card ">
         <img src="../../../../assets/img/mapbox/mapbox.png" class="card-img-top" alt="...">
@@ -55,6 +88,4 @@
         </div>
 
       </div>
-    </div>
-  </div>
-</div>
+    </div> -->

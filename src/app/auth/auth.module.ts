@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule } from '@angular/forms';
 import { LogginComponent } from './pages/loggin/loggin.component';
+import { interceptorProvider } from './services/interceptor.service';
 
 
 
@@ -12,10 +13,10 @@ import { LogginComponent } from './pages/loggin/loggin.component';
     LogginComponent
   ],
   imports: [
-    CommonModule, 
-    AuthRoutingModule, 
+    CommonModule,
+    AuthRoutingModule,
     FormsModule
   ],
-  providers: []
+  providers: [interceptorProvider]
 })
 export class AuthModule { }

@@ -54,7 +54,6 @@ export class LogginComponent implements OnInit {
 
   campoValido() {
     return this.isLogginFail;
-
   }
 
   onLogin(): void {

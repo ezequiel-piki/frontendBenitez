@@ -1,4 +1,4 @@
-<form class="m-5 " autocomplete="off" #f="ngForm" (ngSubmit)="onLogin()">
+<!-- <form class="col" autocomplete="off" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
   <h1>
     Bienvenid@
   </h1>
@@ -6,12 +6,12 @@
   <span>
     Para iniciar sesion ingrese usuario/mail y contraseña
   </span>
-  <div class="mb-3 mt-2">
+  <div class="form-group">
     <label for="nombreUsuario" class="form-label">
       User
     </label>
     <input type="text" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario"
-      class="form-control bg-secondary text-white" required
+      class="form-control bg-secondary text-white text-center" required
       [ngClass]="{'is-valid':!campoValido(),'is-invalid':campoValido()}">
 
 
@@ -20,7 +20,7 @@
     </span>
   </div>
 
-  <div class="mb-3">
+  <div class="form-group">
 
     <label for="password" class="form-label">
       Password
@@ -42,4 +42,61 @@
     Enviar
   </button>
 
-</form>
+</form> -->
+<div class="container d-flex align-items-center justify-content-center">
+  <div class="col-md-6">
+    <form class="login100-form mt-5" autocomplete="off" #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
+      <span class="login100-form-title p-b-49">
+        Bienvenid@
+      </span>
+
+      <span>
+        Para iniciar sesion ingrese usuario y contraseña
+      </span>
+
+      <div class="wrap-input100 m-b-23">
+        <span class="label-input100">Usuario</span>
+        <input class="input100" type="email" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario"
+          placeholder="Ingrese su usuario" required [ngClass]="{'is-valid':!campoValido(),'is-invalid':campoValido()}">
+        <span class="form-text text-danger" *ngIf="campoValido()">
+
+        </span>
+        <!-- <span class="focus-input100"></span> -->
+      </div>
+
+      <div class="wrap-input100">
+        <span class="label-input100">Password</span>
+        <input class="input100" type="password" placeholder="Ingrese su contraseña" id="password" name="password"
+          [(ngModel)]="password" required [ngClass]="{'is-valid':!campoValido(),'is-invalid':campoValido()}">
+        <span class="form-text text-danger" *ngIf="campoValido()">
+          Algunos datos son incorrectos, por favor verifique su usuario y contraseña.
+        </span>
+        <span class="focus-input100"></span>
+      </div>
+
+      <div class="text-right p-t-8 p-b-31"></div>
+
+      <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+          <div class="login100-form-bgbtn"></div>
+          <button class="login100-form-btn" type="submit">
+            Login
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="flex-col-c p-t-60">
+        <span class="txt1 p-b-17">
+          ¿No tienes cuenta?
+        </span>
+
+        <a routerLink="/auth/registro" class="txt2">
+          Crear una aquí
+        </a>
+      </div> -->
+    </form>
+
+  </div>
+
+</div>

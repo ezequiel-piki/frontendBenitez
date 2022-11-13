@@ -8,6 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 
 
 
@@ -24,6 +28,9 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgbModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

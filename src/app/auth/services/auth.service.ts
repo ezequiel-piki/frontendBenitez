@@ -14,27 +14,27 @@ import { NuevoUsuario } from '../class/nuevo-usuario';
 
 export class AuthService {
 
-  private  baseUrl = "https://backendbenitez.herokuapp.com/auth";
-  
+  //private  baseUrl = "https://backendbenitez.herokuapp.com/auth";
+  private baseUrl = "http://localhost:8181/auth";
 
 
-  constructor(private http:HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   verificaAutenticacion(): boolean {
 
-    return (sessionStorage.getItem('AuthToken')!==null);
-  }  
+    return (sessionStorage.getItem('AuthToken') !== null);
+  }
 
-  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/nuevo`, nuevoUsuario);
   }
-  
-  login(loginUsuario:LoginUsuario): Observable<JwtDto>{
-    return this.http.post<JwtDto>(`${this.baseUrl}/login`,loginUsuario)
+
+  login(loginUsuario: LoginUsuario): Observable<JwtDto> {
+    return this.http.post<JwtDto>(`${this.baseUrl}/login`, loginUsuario)
   }
 
- 
-  
-  
+
+
+
 
 }

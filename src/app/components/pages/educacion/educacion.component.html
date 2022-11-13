@@ -1,0 +1,51 @@
+<div class="container rounded-0">
+  <div class="d-inline-flex mt-1">
+    <div class="">
+      <h1 class="p-2">Educación</h1>
+    </div>
+    <div class="my-auto">
+      <button class="btn btn-outline-dark btn-sm rounded-0 shadow" routerLink="/portfolio/agregarEdu" *ngIf="isLogged">
+        <i class="bi bi-plus-lg" style="font-size: 21px;"></i>
+      </button>
+
+    </div>
+  </div>
+  <hr>
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+
+    <div class="col" *ngFor="let edu of educacion">
+
+      <div class="card h-100 border-5 rounded-0 shadow-lg">
+
+
+        <div class="card-body">
+          <h5 class="card-title">{{edu.nombre}}</h5>
+          <p class="card-text">{{edu.descripcion}}</p>
+        </div>
+
+        <div class="btn-group">
+
+          <button type="button" class="btn btn-outline-secondary rounded-0" routerLink="/portfolio/editarEdu/{{edu.id}}"
+            *ngIf="isLogged">
+            <i class="bi bi-pencil"></i>
+            Editar
+          </button>
+
+          <button type="button" class="btn btn-outline-danger rounded-0 " (click)="delete(edu.id)" *ngIf="isLogged">
+            <i class="bi bi-x-circle"></i>
+            Eliminar
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
