@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  //private url = 'https://backendbenitez.herokuapp.com/educacion'
-  private url = 'http://localhost:8181/educacion'
+  private url = 'https://backendbenitez.herokuapp.com/educacion'
+  //private url = 'http://localhost:8181/educacion'
+
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Educacion[]> {
