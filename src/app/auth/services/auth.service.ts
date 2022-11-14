@@ -14,8 +14,8 @@ import { NuevoUsuario } from '../class/nuevo-usuario';
 
 export class AuthService {
 
-  //private baseUrl = "https://backendbenitez.herokuapp.com/auth";
-  private baseUrl = "http://localhost:8181/auth";
+  private baseUrl = "https://backendbenitez.herokuapp.com/auth";
+  //private baseUrl = "http://localhost:8181/auth";
 
 
   constructor(private http: HttpClient) { }
