@@ -16,10 +16,6 @@ export class AcercaDeComponent implements OnInit {
 
   persona: Persona = null;
 
-
-
-
-
   constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
   isLogged = false;
