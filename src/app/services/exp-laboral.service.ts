@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExpLaboralService {
 
-  private url = 'https://backendbenitez.herokuapp.com/habilidad'
+  private url = 'https://backendbenitez-production.up.railway.app/habilidad'
   //private url = 'http://localhost:8181/habilidad'
 
   constructor(private http: HttpClient) { }
