@@ -8,7 +8,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  private url = 'https://backendbenitez-production.up.railway.app/proyectos'
+  private url = 'https://benitez-service-backend.onrender.com/proyectos'
   //private url = 'http://localhost:8181/proyectos'
 
   constructor(private http: HttpClient) { }

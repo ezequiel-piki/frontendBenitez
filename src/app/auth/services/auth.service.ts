@@ -14,7 +14,7 @@ import { NuevoUsuario } from '../class/nuevo-usuario';
 
 export class AuthService {
 
-  private baseUrl = "https://backendbenitez-production.up.railway.app/auth";
+  private baseUrl = "https://benitez-service-backend.onrender.com/auth";
   //private baseUrl = "http://localhost:8181/auth";
 
 

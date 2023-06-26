@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  private url = 'https://backendbenitez-production.up.railway.app/educacion'
+  private url = 'https://benitez-service-backend.onrender.com/educacion'
   //private url = 'http://localhost:8181/educacion'
 
   constructor(private httpClient: HttpClient) { }

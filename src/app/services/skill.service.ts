@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
 
-  private url = 'https://backendbenitez-production.up.railway.app/skills'
+  private url = 'https://benitez-service-backend.onrender.com/skills'
   //private url = 'http://localhost:8181/skills'
 
   constructor(private httpClient: HttpClient) { }
